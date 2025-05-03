@@ -34,6 +34,10 @@ def loantype(request):
 	return render(request, 'dashboard/loantype.html', {'loantype':loantype})
 
 @login_required(login_url='/account/login/')
+def user_guide(request):
+	return render(request, 'dashboard/user_guide.html')
+
+@login_required(login_url='/account/login/')
 @transaction.atomic
 def save_product_form(request, form, template_name):
 	data = dict()

@@ -10,6 +10,7 @@ urlpatterns = [
     path('product/create/', views.product_create, name='create_product'),
     re_path(r'^product/update/(?P<id>\d+)/$', views.product_update, name="update_product"),
     re_path(r'^product/delete/(?P<id>\d+)/$', views.product_delete, name="delete_product"),
+    path('user-guide/', views.user_guide, name='user_guide'),
 ]
 
 

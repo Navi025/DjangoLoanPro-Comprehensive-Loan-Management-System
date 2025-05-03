@@ -1,4 +1,4 @@
-# Loan Management System
+# DjangoLoanPro - Comprehensive Loan Management System
 
 ## Overview
 The Loan Management System (LMS) is a web-based application for managing loans, from applications to repayments. It streamlines processes for administrators, employees, and users.
@@ -37,47 +37,55 @@ The Loan Management System (LMS) is a web-based application for managing loans, 
 ## Installation
 ### Prerequisites
 - Python 3.x
-- Django 3.x
+- Django 5.0.6
 - Dependencies in `requirements.txt`
 
 ### Steps
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/yourusername/loan-management-system.git
-   cd loan-management-system
+   git clone https://github.com/Navi025/DjangoLoanPro-Comprehensive-Loan-Management-System.git
+   cd DjangoLoanPro-Comprehensive-Loan-Management-System
    ```
 2. **Create a virtual environment**
    ```sh
    python -m venv venv
-   source venv/bin/activate
    ```
-3. **Install dependencies**
+3. **Activate the virtual environment**
+   - On Windows (cmd):
+     ```sh
+     venv\Scripts\activate
+     ```
+   - On Unix or MacOS (bash):
+     ```sh
+     source venv/bin/activate
+     ```
+4. **Install dependencies**
    ```sh
    pip install -r requirements.txt
-   ```
-4. **Apply migrations**
+5. **Apply migrations**
    ```sh
    python manage.py migrate
    ```
-5. **Create a superuser**
+6. **Create a superuser**
    ```sh
    python manage.py createsuperuser
    ```
-6. **Run the development server**
+7. **Run the development server**
    ```sh
    python manage.py runserver
    ```
-7. **Access the application**
-   Navigate to `http://127.0.0.1:8000`
+8. **Access the application**
+   Navigate to `http://127.0.0.1:8000/`
 
-## Usage
-### URLs for Key Pages
+## URLs for Key Pages
 - **Registration**: `/accounts/register/`
 - **User Dashboard**: `/dashboard/`
 - **Loan Application**: `/loans/apply/`
 - **Admin Dashboard**: `/admin/`
 - **Loan Review**: `/loans/review/`
+- **User Guide**: `/user-guide/`
 
+## Usage
 ### Workflow
 1. **User Registration**
    - Users register and log in.
