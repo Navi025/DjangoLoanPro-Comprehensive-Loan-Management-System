@@ -7,7 +7,7 @@ from .models import Loan
 # Create your views here.
 
 class loanList(LoginRequiredMixin,ListView):
-	template='loan/template_list'
+	template_name = 'loan/loan_list.html'
 	model=Loan
 
 	def get_context_data(self, **kwargs):

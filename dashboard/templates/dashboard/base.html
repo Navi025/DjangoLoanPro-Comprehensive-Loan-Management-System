@@ -23,40 +23,10 @@
     <script src="{% static 'dashboard/assets/js/modernizr.js'%}"></script>
 
 </head>
-<body hoe-navigation-type="vertical" hoe-nav-placement="left" theme-layout="wide-layout">
-
-    <!-- Navigation bar for desktop -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none d-lg-flex">
-        <a class="navbar-brand" href="#">Loan Management System</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDesktop" aria-controls="navbarNavDesktop" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDesktop">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="/dashboard/">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="/loans/">Loans</a></li>
-                <li class="nav-item"><a class="nav-link" href="/asset/">Assets</a></li>
-                <li class="nav-item"><a class="nav-link" href="/account/borrower/">Accounts</a></li>
-                <li class="nav-item"><a class="nav-link" href="/user-guide/">User Guide</a></li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admin</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Inbox <span class="badge badge-warning">3</span></a>
-                        <a class="dropdown-item" href="#">Profile</a>
-                        <a class="dropdown-item" href="#">Settings <span class="badge badge-primary">3/9</span></a>
-                        <a class="dropdown-item" href="#">Calendar</a>
-                        <a class="dropdown-item" href="#">Tasks</a>
-                        <a class="dropdown-item" href="/account/logout/">Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<body hoe-navigation-type="vertical" hoe-nav-placement="left" theme-layout="wide-layout" style="display:flex; flex-direction:column; min-height:100vh;">
 
     <!-- Sidebar for mobile -->
-    <div id="hoeapp-wrapper" class="hoe-hide-lpanel d-lg-none" hoe-device-type="mobile">
+    <div id="hoeapp-wrapper" class="hoe-hide-lpanel d-lg-none" hoe-device-type="mobile" style="flex:1; display:flex; flex-direction:column;">
         <header id="hoe-header" hoe-lpanel-effect="shrink">
             <div class="hoe-left-header">
                 <a href="#">Loan Management System</a>
@@ -110,22 +80,11 @@
                             <li><a href="#"><img src="assets/images/tr.png" alt=""> Chinese </a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="assets/images/avtar.png" alt="" width="30" class="img-circle"> Admin</a>
-                        <ul class="dropdown-menu dropdown-menu-scale user-dropdown">
-                            <li><a href="#"><i class="ion-email-unread"></i> Inbox <span class="label label-warning">3</span></a></li>
-                            <li><a href="#"><i class="ion-person"></i> Profile </a></li>
-                            <li><a href="#"><i class="ion-settings"></i> Settings <span class="label label-primary">3/9</span></a></li>
-                            <li><a href="#"><i class="ion-calendar"></i> Calendar </a></li>
-                            <li><a href="#"><i class="ion-ios-compose"></i> Tasks </a></li>
-                            <li><a href="/account/logout/"><i class="ion-log-out"></i> Logout </a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </header>
-        <div id="hoeapp-container" hoe-color-type="lpanel-bg7" hoe-lpanel-effect="shrink">
-            <aside id="hoe-left-panel" hoe-position-type="absolute" style="background-color: black;">
+        <div id="hoeapp-container" hoe-color-type="lpanel-bg7" hoe-lpanel-effect="shrink" style="flex:1; display:flex; flex-direction:column;">
+            <aside id="hoe-left-panel" hoe-position-type="absolute" style="background-color: black; flex-shrink: 0;">
                 <ul class="nav panel-list" style="background-color: black;">
                     <li>
                         <a href="/dashboard/" style="background-color: black;" >
@@ -154,19 +113,20 @@
                     </li>
                     <li>
                         <a href="/user-guide/" style="background-color: black;" >
-                            <i class="fa fa-book" style="color: white;"></i>
+                            <i class="fa fa-book" style="color: white;"> </i>
                             <span class="menu-text" style="color: white;">User Guide</span>
                         </a>
                     </li>
                 </ul>
             </aside><!--aside left menu end-->
+            <main style="flex:1; overflow:auto;">
             {% block content %}
             {% endblock %}
-            <div class="footer bg-success">
+            </main>
+            <div class="footer bg-success" style="flex-shrink: 0;">
                 <div class="row">
                     <div class="col-sm-12">
                         <span>&copy; Copyright 2024. Loan Management System - Navnitya Vinayak</span>
-                        <div class="footer bg"></div>
                     </div>
                 </div>
             </div>

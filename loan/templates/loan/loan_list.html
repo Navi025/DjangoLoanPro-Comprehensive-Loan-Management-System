@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan List</title>
+</head>
+<body>
+    <h1>Loan List</h1>
+    <ul>
+        {% for loan in loan_list %}
+            <li>{{ loan }}</li>
+        {% empty %}
+            <li>No loans available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
